@@ -12,6 +12,5 @@ class ContactsController < ApplicationController
   def show_all_contacts
     all_contacts = Contact.all
     render json: all_contacts
-  
   end
 end
