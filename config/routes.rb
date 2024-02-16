@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
 
-  get "/contact", controller: "contacts", action: "show_contact"
-  get "/contacts", controller: "contacts", action: "show_all_contacts"
+  get "/all_contacts" => "contacts#index"
+  get "/the_contact", controller: "contacts", action: "show"
+  post "/contacts" => "contacts#create"
 end
